@@ -22,4 +22,39 @@ if(json.length> 0){
 
 }
 
+async function addNewPost(title, body) {
+    
+    await fetch (
+        'https://jsonplaceholder.typicode.com/posts',
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title,
+                body,
+                userId: 2
+            })
+        }
+    )
+
+    document.querySelector('#titlefield').value = ''
+    document.querySelector('#bodyfield').value = ''
+
+    readPosts()
+
+}
+
+document.querySelector('#insertbutton').addEventListener('click', () => {
+    let title = document.querySelector('#titlefield').value
+    let body = document.querySelector('#bodyfield').value
+
+    if(title && body){
+        addNewPost(title,body)
+    }else{
+        alert('Preencha todos os campo!!')
+    }
+})
+
 readPosts()
