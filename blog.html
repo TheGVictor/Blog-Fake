@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="blog.css">
+    <script src="https://kit.fontawesome.com/4259573733.js" crossorigin="anonymous"></script>
     <title>The Fake Blog</title>
 </head>
 <body>
@@ -14,21 +15,36 @@
 </header>
     <fieldset>
         <legend>Inserir um novo post</legend>
+        <div class="container">
         <div>
-            <input type="text" id="titlefield" placeholder="Título do post">
+            Título: <input type="text" id="titlefield">
         </div>
 
         <div>
-            <textarea  id="bodyfield" placeholder="Conteúdo"></textarea>
+            Conteúdo: <input type="text"  id="bodyfield"></input>
         </div>
-
+    </div>
         <div>
             <button id="insertbutton">Inserir</button>
         </div>
+    
     </fieldset>
 
+    <div class="crp">
     <div class="posts"></div>
+</div>
 
+
+<div class="ftr">
+<footer>
+    
+    <p>Página feita para afins de estudo <br>
+    By Gabriel Sancinetti</p>
+    <a href="https://instagram.com/sancinetti_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://github.com/TheGVictor" target="_blank"><i class="fa-brands fa-github"></i></a>
+
+</footer>
+</div>
     <script src="blog.js"></script>
 </body>
 </html>
